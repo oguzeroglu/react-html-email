@@ -3,6 +3,7 @@ import Box from './components/Box'
 import Email from './components/Email'
 import Image from './components/Image'
 import Item from './components/Item'
+import Items from './components/Items'
 import Span from './components/Span'
 import A from './components/A'
 import renderEmail from './renderEmail'
@@ -19,6 +20,7 @@ export {
   Email,
   Image,
   Item,
+  Items,
   Span,
   A,
   configStyleValidator,
