@@ -7,7 +7,7 @@ export default function Items(props) {
   return (
     <tr>
       {Children.map(props.children, child => (
-        <td {...includeDataProps(props)} align={props.align} valign={props.valign} bgcolor={props.bgcolor} style={props.style}>
+        <td {...includeDataProps(props)} className={props.className} align={props.align} valign={props.valign} bgcolor={props.bgcolor} style={props.style}>
             {child}
         </td>
       ))}
@@ -21,4 +21,5 @@ Items.propTypes = {
   valign: PropTypes.oneOf(['top', 'middle', 'bottom']),
   style: EmailPropTypes.style,
   children: PropTypes.node,
+  className: PropTypes.string,
 }
