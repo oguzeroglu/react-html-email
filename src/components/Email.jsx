@@ -26,7 +26,7 @@ export default function Email(props) {
           ...props.bodyStyle,
         }}
       >
-        <Box width="100%" height="100%" bgcolor={props.bgcolor}>
+        <Box width="100%" height="100%" bgcolor={props.bgcolor} style={props.mainStyle}>
           <Item align={props.align} valign={props.valign}>
             <Box width={props.width} align="center" cellPadding={props.cellPadding} cellSpacing={props.cellSpacing} style={props.style}>
               {props.children}
@@ -45,6 +45,7 @@ Email.propTypes = {
   cellPadding: PropTypes.number,
   cellSpacing: PropTypes.number,
   style: EmailPropTypes.style,
+  mainStyle: EmailPropTypes.style,
   headCSS: PropTypes.string,
   width: PropTypes.string,
   align: PropTypes.oneOf(['left', 'center', 'right']),
@@ -62,6 +63,7 @@ Email.defaultProps = {
   cellPadding: undefined,
   cellSpacing: undefined,
   style: undefined,
+  mainStyle: undefined,
   headCSS: undefined,
   headTags: undefined,
   bodyStyle: undefined,
